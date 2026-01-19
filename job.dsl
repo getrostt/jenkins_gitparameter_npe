@@ -17,24 +17,20 @@ pipelineJob('testMain') {
     }
 }
 
-pipelineJob('test') {
-    displayName('Test')
+pipelineJob('test2') {
+    displayName('Test2')
 
     parameters {
-        gitParameter {
-            name('TARGET_BRANCH')
+        configure { project ->
+            project / 'properties' / 'hudson.model.ParametersDefinitionProperty' / 'parameterDefinitions' << 'net.uaznia.lukanus.hudson.plugins.gitparameter.GitParameterDefinition' {
+                name('TARGET_BRANCH')
                 description('Branch to integrate')
                 type('PT_BRANCH')
-                branch('')
                 branchFilter('origin/main$')
                 sortMode('ASCENDING_SMART')
                 defaultValue('main')
                 selectedValue('DEFAULT')
-                tagFilter('')
-                useRepository('')
-                quickFilterEnabled(true)
-
-        }
+            }
     }
     
     definition {
