@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                build job: 'test', parameters: [gitParameter(name: 'TARGET_BRANCH', value: 'origin/main')]
+                build job: 'test2', parameters: [gitParameter(name: 'TARGET_BRANCH', value: 'origin/main')]
             }
         }
     }
