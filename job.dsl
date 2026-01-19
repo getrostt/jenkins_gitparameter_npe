@@ -31,6 +31,7 @@ pipelineJob('test2') {
                 defaultValue('main')
                 selectedValue('DEFAULT')
             }
+        }
     }
     
     definition {
