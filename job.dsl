@@ -21,7 +21,7 @@ pipelineJob('test') {
                 git {
                     branch 'origin/main'
                     remote {
-                        url 'https://github.com/getrostt/jenkins_gitparameter_npe.git
+                        url 'https://github.com/getrostt/jenkins_gitparameter_npe.git'
                     }
                 }
             }
