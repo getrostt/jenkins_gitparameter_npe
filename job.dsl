@@ -1,5 +1,5 @@
-pipelineJob('testMain') {
-    displayName('Test Main')
+pipelineJob('testMain2') {
+    displayName('Test Main2')
     
     definition {
         cpsScm {
