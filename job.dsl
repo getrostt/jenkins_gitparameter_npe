@@ -7,7 +7,7 @@ pipelineJob('testMain2') {
             scriptPath('mainPipeline.jenkins')
             scm {
                 git {
-                    branch 'origin/main'
+                    branch 'origin/configure'
                     remote {
                         url 'https://github.com/getrostt/jenkins_gitparameter_npe.git'
                     }
@@ -40,7 +40,7 @@ pipelineJob('test2') {
             scriptPath('Jenkinsfile')
             scm {
                 git {
-                    branch 'origin/main'
+                    branch 'origin/configure'
                     remote {
                         url 'https://github.com/getrostt/jenkins_gitparameter_npe.git'
                     }
