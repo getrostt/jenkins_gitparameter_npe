@@ -1,3 +1,22 @@
+pipelineJob('testMain') {
+    displayName('Test Main')
+    
+    definition {
+        cpsScm {
+            lightweight(true)
+            scriptPath('mainPipeline.jenkins')
+            scm {
+                git {
+                    branch 'origin/main'
+                    remote {
+                        url 'https://github.com/getrostt/jenkins_gitparameter_npe.git'
+                    }
+                }
+            }
+        }
+    }
+}
+
 pipelineJob('test') {
     displayName('Test')
 

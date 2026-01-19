@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello') {
+            steps {
+                build job: 'test', parameters: [gitParameter(name: 'TARGET_BRANCH', value: 'origin/main')]
+            }
+        }
+    }
+}
